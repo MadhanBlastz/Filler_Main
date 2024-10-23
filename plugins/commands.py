@@ -97,8 +97,8 @@ async def start(client, message):
                ]]
             else:
                  buttons = [[
-                
-                 InlineKeyboardButton('✇ Sʜᴀʀᴇ Oɴ WʜᴀᴛsAᴘᴘ ✇', url="https://bit.ly/3LjsIsR")
+                 InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+               #  InlineKeyboardButton('✇ Sʜᴀʀᴇ Oɴ WʜᴀᴛsAᴘᴘ ✇', url="https://bit.ly/3LjsIsR")
                  ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             m=await message.reply_sticker("CAACAgUAAxkBAAIGBGaIQ3GTvjPRwI1B_lFMKU-SFBSqAAIhAAPBJDExrJTo8r6ffCUeBA") 
@@ -106,7 +106,7 @@ async def start(client, message):
             await m.delete()
             await message.reply_photo(
                  photo=random.choice(PICS),
-                 caption=script.START_TXT1.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                 caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
                  reply_markup=reply_markup,
                  parse_mode=enums.ParseMode.HTML
                  )
@@ -144,7 +144,7 @@ async def start(client, message):
              await m.delete()
              await message.reply_photo(
                  photo=random.choice(PICS),
-                 caption=script.START_TXT2.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                 caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
                  reply_markup=reply_markup,
                  parse_mode=enums.ParseMode.HTML
                  )
